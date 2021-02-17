@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="70dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".loginViewModel">
+
+        <EditText
+            android:id="@+id/ev_enter_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="35dp"
+            android:padding="10dp"
+            android:background="#1e8e8e93"
+            android:hint="@string/enter_the_otp"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/btn_send_otp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_send_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#1e8e8e93"
+            android:padding="10dp"
+            android:text="@string/send_otp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp"
+            android:textColor="#eb3878"
+            app:layout_constraintBottom_toTopOf="@+id/btn_resend_otp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ev_enter_otp" />
+
+        <Button
+            android:id="@+id/btn_resend_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:background="#1e8e8e93"
+            android:padding="10dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp"
+            android:text="@string/resend_otp"
+            android:textColor="#eb3878"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_send_otp" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

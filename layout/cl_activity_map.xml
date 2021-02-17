@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_chooseAddress"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/design_default_color_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_save_address"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/spacing_53"
+                android:layout_height="@dimen/spacing_30"
+                android:layout_marginStart="@dimen/spacing_5dp"
+                android:layout_marginTop="@dimen/spacing_17dp"
+                android:layout_marginEnd="@dimen/spacing_15dp"
+                android:layout_marginBottom="@dimen/spacing_12"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@string/font_fontFamily_medium"
+                android:text="@string/toolbarSave"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font_size_17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.466"
+                android:layout_marginLeft="@dimen/spacing_5dp"
+                android:layout_marginRight="@dimen/spacing_15dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/spacing_55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_chooseAddress"
+        tools:context="com.intern.internproject.location.CLMapActivity"
+        />
+
+
+    <EditText
+        android:id="@+id/et_addressChooser"
+        android:layout_width="@dimen/spacing_0"
+        android:layout_height="@dimen/spacing_40dp"
+        android:layout_marginStart="@dimen/spacing_15dp"
+        android:layout_marginTop="@dimen/spacing_10dp"
+        android:layout_marginEnd="@dimen/spacing_15dp"
+        android:layout_marginBottom="@dimen/spacing_10dp"
+        android:background="@color/design_default_color_background"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        android:textAlignment="viewStart"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/spacing_14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_chooseAddress"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="LabelFor"
+        android:gravity="start" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

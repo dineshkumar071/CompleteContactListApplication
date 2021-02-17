@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_verification_forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_verification_alert"
+        android:layout_marginTop="@dimen/spacing_25dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/tv_received_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_received_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_10dp"
+        android:text="@string/entered_the_received_otp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/et_enter_otp_forget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_verification_forgot" />
+
+    <EditText
+        android:id="@+id/et_enter_otp_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_10dp"
+        android:background="@color/design_default_color_background"
+        android:ems="10"
+        android:hint="@string/otp"
+        android:inputType="textPersonName|text|textEmailAddress"
+        android:padding="@dimen/spacing_10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_forgot_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_received_otp" />
+
+    <Button
+        android:id="@+id/btn_forgot_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_10dp"
+        android:background="@color/design_default_color_background"
+        android:text="@string/_verification_alert_cancel"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_forgot_ok"
+        app:layout_constraintEnd_toStartOf="@+id/btn_forgot_ok"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_enter_otp_forget" />
+
+    <Button
+        android:id="@+id/btn_forgot_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginLeft="@dimen/spacing_10dp"
+        android:background="@color/design_default_color_background"
+        android:text="@string/_verification_alert_okay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_forgot_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/et_enter_otp_forget" />
+</androidx.constraintlayout.widget.ConstraintLayout>
